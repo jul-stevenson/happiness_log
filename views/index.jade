@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  hr
+  h3 Add a Post
+  form(action="/" method="post")
+    select
+      option Thought
+      option Person
+      option Experience
+    p Text
+    textarea(name="text")
+    input(type="submit" value="Submit")
+  hr
+  each post in posts
+    span= post.date
+    p=post.text
