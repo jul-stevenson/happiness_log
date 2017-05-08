@@ -7,6 +7,10 @@ html
     button(onclick="thoughts()") Thoughts
     button(onclick="experience()") Experiences
     button(onclick="people()") People
+    hr
+    each post in posts
+      span= post.date.toDateString()
+      p=post.text
 script.
   function thoughts() {
     console.log("Called log")
