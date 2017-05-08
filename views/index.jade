@@ -5,7 +5,7 @@ block content
   hr
   h3 Add a Post
   form(action="/" method="post")
-    select
+    select(name="type")
       option Thought
       option Person
       option Experience
@@ -15,4 +15,5 @@ block content
   hr
   each post in posts
     span= post.date
+    p= post.type
     p=post.text
