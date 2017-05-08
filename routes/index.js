@@ -4,11 +4,8 @@ var Post = require('../models/post');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Post.find({ 'type': 'Experience'}, function(err, posts) {  
     res.render('index', { 
       title: "Julie\'s Happiness Log", 
-      posts: posts 
-    });
   });
 });
 
@@ -31,7 +28,7 @@ router.post('/', function(req, res) {
 });
 
 router.get('/thoughts', function(req, res, next) {
-  Post.find({ 'type': 'Thought'}, function(err, posts) {  
+  Post.find({ 'type': 'Thought' }).sort({ date: -1 }).exec(function(err, posts) {  
     res.render('posts', { 
       title: "Julie\'s Happiness Log", 
       posts: posts 
@@ -40,7 +37,7 @@ router.get('/thoughts', function(req, res, next) {
 });
 
 router.get('/experience', function(req, res, next) {
-  Post.find({ 'type': 'Experience'}, function(err, posts) {  
+  Post.find({ 'type': 'Experience'}).sort({ date: -1 }).exec(function(err, posts) {  
     res.render('posts', { 
       title: "Julie\'s Happiness Log", 
       posts: posts 
@@ -49,7 +46,7 @@ router.get('/experience', function(req, res, next) {
 });
 
 router.get('/people', function(req, res, next) {
-  Post.find({ 'type': 'People'}, function(err, posts) {  
+  Post.find({ 'type': 'People'}).sort({ date: -1 }).exec(function(err, posts) {  
     res.render('posts', { 
       title: "Julie\'s Happiness Log", 
       posts: posts 

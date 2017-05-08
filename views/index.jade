@@ -4,13 +4,17 @@ html
     h1= title
     link(href='/stylesheets/style.css', rel='stylesheet')
    body  
-    button(onclick="") Home
+    button(onclick="home()") Home
     button(onclick="thoughts()") Thoughts
     button(onclick="experience()") Experiences
     button(onclick="people()") People
+    hr
+    p Dear Friends and Family,
 script.
+  function home() {
+    window.location.href = '/'
+  }
   function thoughts() {
-    console.log("Called log")
     window.location.href = '/thoughts'
   }
   function experience() {

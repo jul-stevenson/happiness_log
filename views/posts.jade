@@ -4,6 +4,7 @@ html
     h1= title
     link(href='/stylesheets/style.css', rel='stylesheet')
   body  
+    button(onclick="home()") Home
     button(onclick="thoughts()") Thoughts
     button(onclick="experience()") Experiences
     button(onclick="people()") People
@@ -12,13 +13,15 @@ html
       span= post.date.toDateString()
       p=post.text
 script.
+  function home() {
+    window.location.href = "/"
+  }
   function thoughts() {
-    console.log("Called log")
     window.location.href = '/thoughts'
   }
   function experience() {
     window.location.href = '/experience'
   }
   function people() {
-    window.location.href = 'people'
+    window.location.href = '/people'
   }
