@@ -1,15 +1,16 @@
 doctype html
 html
   head
-    h1= title
     link(href='/stylesheets/style.css', rel='stylesheet')
-   body  
-    button(onclick="home()") Home
-    button(onclick="thoughts()") Thoughts
-    button(onclick="experience()") Experiences
-    button(onclick="people()") People
-    hr
-    p Dear Friends and Family,
+  body
+    div(class="topnav")
+      button() Julie's Happiness Log
+      button(onclick="home()", class="post_button") Home
+      button(onclick="thoughts()", class="post_button") Thoughts
+      button(onclick="experience()", class="post_button") Experiences
+      button(onclick="people()", class="post_button") People
+    div(id="letter")
+      p Dear Friends and Family,
 script.
   function home() {
     window.location.href = '/'
