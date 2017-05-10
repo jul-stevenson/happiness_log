@@ -2,16 +2,19 @@
 
 body {
   background-image: url("../images/table.jpg");
-  background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   font-family: 'Merriweather', serif;
   margin: 0px;
+  color: #444140;
 }
 
 p {
   padding: 20px;
 }
 
+/* Posts */
 #posts {
   width: 75%;
   height: 75%;
@@ -23,40 +26,28 @@ p {
   right: 0;
 
   margin: auto;
-
-  color: #E2D4BA;
 }
 
-#letter {
-  width: 50%;
-  height: 50%;
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  margin: auto;
-
-  color: #E2D4BA;
+#post {
+  background-color: #FAEBD7;
+  margin: 10px;
 }
 
+/* Date in posts */
 .date {
   font-size: 20px;
   padding-top: 20px;
   padding-left: 10px;
 }
 
-/* Add a black background color to the top navigation */
+/* Navigation bar */
 .topnav {
-    background-color: #B38D97;
+    background-color: #FFA987;
     overflow: hidden;
     width: 100%;
     z-index: 10;
 }
 
-/* Style the links inside the navigation bar */
 .topnav button {
     float: left;
     display: block;
@@ -68,18 +59,12 @@ p {
     border: none;
 }
 
-/* Change the color of links on hover */
 .post_button:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #E54B4B;
+    color: #1E1E24;
 }
 
-/* Add a color to the active/current link */
-.post_button:active {
-    background-color: #4CAF50;
-    color: white;
-}
-
+/* Images */
 div.gallery img {
     position: relative;
     width: 300px;

@@ -12,9 +12,10 @@ html
     button(onclick="quotes()", class="post_button") Quotes
   div(id="posts")
     each post in posts
-      if post.type != "Quote"
-        span(class="date")=post.date.toDateString()
-      p=post.text
+      div(id="post")
+        if post.type != "Quote"
+          span(class="date")=post.date.toDateString()
+        p=post.text
 script.
   function home() {
     window.location.href = '/'
