@@ -29,7 +29,7 @@ router.post('/', function(req, res) {
 });
 
 router.get('/accomplishments', function(req, res, next) {
-  Post.find({ 'type': 'Gratitude' }).sort({ date: -1 }).exec(function(err, posts) {
+  Post.find({ 'type': 'Accomplishment' }).sort({ date: -1 }).exec(function(err, posts) {
     res.render('posts', {
       title: "Julie\'s Happiness Log",
       posts: posts
@@ -38,7 +38,7 @@ router.get('/accomplishments', function(req, res, next) {
 });
 
 router.get('/gratitude', function(req, res, next) {
-  Post.find({ 'type': 'Accomplishment'}).sort({ date: -1 }).exec(function(err, posts) {
+  Post.find({ 'type': 'Gratitude'}).sort({ date: -1 }).exec(function(err, posts) {
     res.render('posts', {
       title: "Julie\'s Happiness Log",
       posts: posts
