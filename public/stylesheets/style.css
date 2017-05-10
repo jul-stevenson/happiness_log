@@ -1,28 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: grey;
+  background-image: url("../images/table.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   font-family: 'Merriweather', serif;
   margin: 0px;
-  text-decoration-color: #424B54;
-}
-
-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 800px;
-  min-width: 100%;
-  z-index: -1;
 }
 
 p {
   padding: 20px;
-}
-
-div {
-  background-color: #E2D4BA;
 }
 
 #posts {
@@ -36,6 +23,8 @@ div {
   right: 0;
 
   margin: auto;
+
+  color: #E2D4BA;
 }
 
 #letter {
@@ -49,6 +38,8 @@ div {
   right: 0;
 
   margin: auto;
+
+  color: #E2D4BA;
 }
 
 .date {
@@ -62,6 +53,7 @@ div {
     background-color: #B38D97;
     overflow: hidden;
     width: 100%;
+    z-index: 10;
 }
 
 /* Style the links inside the navigation bar */
@@ -86,4 +78,14 @@ div {
 .post_button:active {
     background-color: #4CAF50;
     color: white;
+}
+
+div.gallery img {
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    border-style: solid;
+    border-color: #E2D4BA;
+    border-width: 7px;
 }

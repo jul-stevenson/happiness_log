@@ -3,7 +3,6 @@ html
   head
     link(href='/stylesheets/style.css', rel='stylesheet')
   body
-  img(src="../images/table.jpg")
   div(class="topnav")
     button() Julie's Happiness Log
     button(onclick="home()", class="post_button") Home
@@ -11,11 +10,9 @@ html
     button(onclick="accomplishments()", class="post_button") Accomplishments
     button(onclick="pictures()", class="post_button") Pictures
     button(onclick="quotes()", class="post_button") Quotes
-  div(id="posts")
-    each post in posts
-      if post.type != "Quote"
-        span(class="date")=post.date.toDateString()
-      p=post.text
+  div(class="gallery")
+    each i in [27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+      img(src="../images/" + i + ".JPG")
 script.
   function home() {
     window.location.href = '/'
