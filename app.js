@@ -29,7 +29,7 @@ app.use('/users', users);
 app.use('/admin', admin);
 
 // Connect to database
-mongoose.connect(process.eng.DB)
+mongoose.connect(process.env.DB)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
