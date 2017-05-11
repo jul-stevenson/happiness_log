@@ -61,7 +61,9 @@ router.get('/pictures', function(req, res, next) {
 
   fs.readdir("./public/images/gallery", (err, files) => {
     files.forEach(function(item) {
-      pictures.push(item);
+      if(item.charAt(0) != '.') {
+        pictures.push(item);
+      }
     });
 
     res.render('pictures', {
