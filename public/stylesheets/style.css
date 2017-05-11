@@ -10,11 +10,6 @@ body {
   color: #444140;
 }
 
-p {
-  padding: 20px;
-  margin-top: 0px;
-}
-
 /* Posts */
 #posts {
   width: 75%;
@@ -27,6 +22,11 @@ p {
   right: 0;
 
   margin: auto;
+}
+
+#posts p {
+  padding: 20px;
+  margin-top: 0px;
 }
 
 #post {
