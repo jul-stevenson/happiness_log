@@ -16,7 +16,7 @@ router.post('/', function(req, res) {
     return res.redirect('/admin');
   }
 
-  if(req.body.login != process.env['LOGIN']) {
+  if(req.body.login != process.env.LOGIN) {
     return res.redirect('/');
   }
 
