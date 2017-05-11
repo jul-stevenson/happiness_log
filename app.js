@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var config = require('./config/config');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -30,7 +29,7 @@ app.use('/users', users);
 app.use('/admin', admin);
 
 // Connect to database
-mongoose.connect(config.db)
+mongoose.connect(process.eng['DB'])
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

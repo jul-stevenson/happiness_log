@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var Post = require('../models/post');
-var config = require('../config/config');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('admin', { 
-    title: "Julie\'s Happiness Log", 
+  res.render('admin', {
+    title: "Julie\'s Happiness Log",
   });
 });
 
@@ -17,7 +16,7 @@ router.post('/', function(req, res) {
     return res.redirect('/admin');
   }
 
-  if(req.body.login != config.login) {
+  if(req.body.login != process.env['LOGIN']) {
     return res.redirect('/');
   }
 
