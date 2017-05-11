@@ -56,7 +56,17 @@ router.get('/quotes', function(req, res, next) {
 });
 
 router.get('/pictures', function(req, res, next) {
-  res.render('pictures', {
-      title: "Julie\'s Happiness Log",
+  // Get all photos
+  var pictures = [];
+
+  fs.readdir("./public/images/gallery", (err, files) => {
+    files.forEach(function(item) {
+      pictures.push(item);
+    });
+
+    res.render('pictures', {
+        title: "Julie\'s Happiness Log",
+        pics: pictures
+    });
   });
 });
