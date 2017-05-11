@@ -3,7 +3,7 @@ html
   head
     title="Julie\'s Happiness Log"
     link(href='/stylesheets/style.css', rel='stylesheet')
-  body
+  body(id="home")
     div(class="topnav")
       button() Julie's Happiness Log
       button(onclick="home()", class="post_button") Home
@@ -11,6 +11,25 @@ html
       button(onclick="accomplishments()", class="post_button") Accomplishments
       button(onclick="pictures()", class="post_button") Pictures
       button(onclick="quotes()", class="post_button") Quotes
+    div(id="letter")
+      p
+        | Dear Friends and Family, <br /><br />
+        | I’ve realized that I let negative thoughts
+        | from past experiences cloud my day-to-day life.
+        | I've forced myself to be pessimistic (or what I’ve
+        | comforted myself by calling realistic) out of fear
+        | and anxiety. However, looking back, my happiest moments
+        | are when I can look past those feelings and let myself
+        | fully experience life.<br /><br />This is my attempt to shed
+        | those bad thoughts, to focus on the positives in my life.
+        | When good things happen, this is where I am going to document
+        | it. When I go to bed, I’m going to think about the day I’ve
+        | had and record what I’m thankful for. When I’m feeling stressed,
+        | this is where I’m going to come, to look at uplifting quotes
+        | and pictures and remind myself of my accomplishments and the
+        | people who care about me.<br /><br />This is the first step towards
+        | a brighter, happier me. Thank you for supporting me in this
+        | journey!<br /><br />Love,<br />Julie
 script.
   function home() {
     window.location.href = '/'
