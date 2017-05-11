@@ -69,6 +69,10 @@ p {
     color: #1E1E24;
 }
 
+.gallery {
+  padding-top: 100px;
+}
+
 /* Images */
 div.gallery img {
     position: relative;
